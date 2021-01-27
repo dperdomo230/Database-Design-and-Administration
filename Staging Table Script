@@ -1,0 +1,59 @@
+USE [IncidentEventLog]
+GO
+
+/****** Object:  Table [IncidentEventLog].[Source_Data_Staging] ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [IncidentEventLog].[Source_Data_Staging](
+	[Source_StagingID] [int] IDENTITY(1,1) NOT NULL,
+	[Source_number] [varchar] (500) NULL,
+	[incident_state] [varchar] (500) NULL,
+	[active] [varchar] (500) NULL,
+	[reassignment_count] [int] NULL,
+	[reopen_count] [int] NULL,
+	[sys_mod_count] [int] NULL,
+	[made_sla] [varchar](500) NULL,
+	[caller_id] [varchar] (500) NULL,
+	[opened_by] [varchar] (500) NULL,
+	[opened_at] [varchar](500) NULL,
+	[sys_created_by] [varchar] (500) NULL,
+	[sys_created_at] [varchar] (500) NULL,
+	[sys_updated_by] [varchar] (500) NULL,
+	[sys_updated_at] [varchar] (500) NULL,
+	[contact_type] [varchar] (500) NULL,
+	[location] [varchar] (500) NULL,
+	[category] [varchar] (500) NULL,
+	[subcategory] [varchar] (500) NULL,
+	[u_symptom] [varchar] (500) NULL,
+	[impact] [varchar] (500) NULL,
+	[urgency] [varchar] (500) NULL,
+	[priority] [varchar] (500) NULL,
+	[assignment_group] [varchar] (500) NULL,
+	[assigned_to] [varchar] (500) NULL,
+	[knowledge] [varchar] (500) NULL,
+	[u_priority_confirmation] [varchar] (500) NULL,
+	[notify] [varchar] (500) NULL,
+	[problem_id] [varchar] (500) NULL,
+	[closed_code] [varchar] (500) NULL,
+	[resolved_by] [varchar] (500) NULL,
+	[resolved_at] [varchar] (500) NULL,
+    [closed_at] [varchar] (500) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Source_StagingID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
