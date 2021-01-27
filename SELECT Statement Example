@@ -1,0 +1,7 @@
+SELECT
+DISTINCT 
+[location]
+/* Selects the database and staging table */
+FROM [IncidentEventLog].[Source_Data_Staging]
+/* Order the columns in ascending order */
+ORDER BY [location] ASC
