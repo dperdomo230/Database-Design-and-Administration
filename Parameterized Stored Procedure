@@ -1,0 +1,22 @@
+USE [Smallville1]
+GO
+
+/****** Object:  StoredProcedure [dbo].[ProductStatusPrice_param]    Script Date: 1/27/2021 2:02:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE proc [dbo].[ProductStatusPrice_param] @ProductID int 
+as
+begin
+select Product. ProductID as 'Product ID', Product.ProductName as 'Product Name', Product.ItemBackOrder as 'Product Back Order', 
+Product.QtyBackOrder as 'Quantity on Back Order', Product.ListPrice as 'Price', Product.DiscountRate as 
+'Discount Rate', CONVERT(decimal(8,2),Product.ActualPrice) as 'Discounted Price'
+from Product
+where ProductID = @ProductID
+end;
+GO
+
+
